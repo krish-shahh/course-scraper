@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Course Scraper</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        .footer {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            height: 60px;
+            line-height: 60px;
+            background-color: #f5f5f5;
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-4">
+        <h1 class="text-center mb-4">Course Scraper</h1>
+        <div class="row justify-content-center mb-3">
+            <div class="col-12 col-md-8 col-lg-6">
+                <input type="text" id="courseCode" class="form-control mb-2" placeholder="Enter Course Code">
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-auto mb-2">
+                <button onclick="startScraping()" class="btn btn-primary mr-2">Start Scraping</button>
+            </div>
+            <div class="col-auto mb-2">
+                <button onclick="getResults()" class="btn btn-info">Load Results</button>
+            </div>
+        </div>
+        <div id="tableContainer" class="mb-3"></div>
+        <!-- Pagination container -->
+        <nav aria-label="Page navigation">
+          <ul id="paginationContainer" class="pagination justify-content-center"></ul>
+        </nav>
+    </div>
+
+    <footer class="footer text-center">
+        Created by <a href="https://www.linkedin.com/in/krish-n-shah/" target="_blank">Krish Shah</a>
+    </footer>
+
+    <!--
+    <div class="container mt-4" id="smsContainer">
+        <div class="row justify-content-center mb-3">
+            <div class="col-12 col-md-8 col-lg-6">
+                <input type="tel" class="form-control mb-2" id="phoneNumber" placeholder="Enter phone number">
+            </div>
+        </div> 
+        <div class="row justify-content-center">
+            <div class="col-auto mb-2">
+                <button class="btn btn-success" onclick="sendSMS()">Send as SMS</button>
+            </div>
+        </div>
+    </div>
+    -->
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.7.12/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
